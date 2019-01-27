@@ -1,13 +1,15 @@
+import { SignupPage } from './../signup/signup';
+import { LoginPage } from './../login/login';
 import { User } from './../../models/user';
 import { ApiProvider } from './../../providers/api/api';
 import { Component,OnInit } from '@angular/core';
 import { ViewController,NavController,NavParams ,App} from 'ionic-angular';
 // import {SignupPage} from '../signup/signup';
-import {FavoritesPage} from '../favorites/favorites';
-import {MyservicesPage} from '../myservices/myservices';
-import {BusquedaPage} from '../busqueda/busqueda';
+// import {FavoritesPage} from '../favorites/favorites';
+// import {MyservicesPage} from '../myservices/myservices';
+// import {BusquedaPage} from '../busqueda/busqueda';
 import {AuthProvider} from  '../../providers/auth/auth';
-import { Create1Page } from "../create1/create1";
+// import { Create1Page } from "../create1/create1";
 import { ModalDenunciaPage } from '../modal-denuncia/modal-denuncia';
 // import { ChangePassPage } from '../change-pass/change-pass';
 // import { BuzonPage } from './../buzon/buzon';
@@ -68,6 +70,7 @@ export class PopoverPage implements OnInit {
 
   openLoginPage(){
     this.close();
+    // this.navCtrl.push("LoginPage");
     this.appCtrl.getActiveNavs()[0].push("LoginPage");
   }
 
@@ -78,6 +81,7 @@ export class PopoverPage implements OnInit {
 
   openSignUpPage(){
     this.close();
+    // this.navCtrl.push("SignupPage");
     this.appCtrl.getActiveNavs()[0].push("SignupPage");
   }
   openAyuda(){
@@ -91,18 +95,18 @@ export class PopoverPage implements OnInit {
 
   openFavoritesPage(){
     this.close();
-    this.appCtrl.getActiveNavs()[0].push(FavoritesPage);
+    this.appCtrl.getActiveNavs()[0].push("FavoritesPage");
   }
   openBusquedaPage(){
     this.close();
-    this.appCtrl.getActiveNavs()[0].push(BusquedaPage);
+    this.appCtrl.getActiveNavs()[0].push("BusquedaPage");
   }
   openMyServicesPage(){
     this.close();
-    this.appCtrl.getActiveNavs()[0].push(MyservicesPage);
+    this.appCtrl.getActiveNavs()[0].push("MyservicesPage");
   }
   openCreatePage(){
     this.close();
-    this.appCtrl.getActiveNavs()[0].push(Create1Page);
+    this.appCtrl.getActiveNavs()[0].push("Create1Page");
   }
 }

@@ -13,7 +13,7 @@ import { SearchPage } from './../search/search';
  * Ionic pages and navigation.
  */
 
-// @IonicPage()
+@IonicPage()
 @Component({
   selector: 'page-subcategories',
   templateUrl: 'subcategories.html',

@@ -3,13 +3,13 @@ import {IonicPage, NavController, PopoverController} from 'ionic-angular';
 import {LoadingController} from 'ionic-angular';
 
 // pages
-import {SubcategoriesPage} from '../subcategories/subcategories';
+// import {SubcategoriesPage} from '../subcategories/subcategories';
 
 // providers
 import {CategoryProvider} from '../../providers/category/category.service';
 
 
-// @IonicPage()
+@IonicPage()
 @Component({
   selector: 'page-categories',
   templateUrl: 'categories.html',
@@ -47,7 +47,7 @@ export class CategoriesPage {
   // }
 
   openSubcategories(catId, title) {
-    this.navCtrl.push(SubcategoriesPage, {
+    this.navCtrl.push("SubcategoriesPage", {
       categoryId: catId,
       title: title
     });

@@ -11,14 +11,14 @@ import {
 } from 'ionic-angular';
 import {ServiceProvider} from '../../providers/service/service.service';
 import {AuthProvider} from '../../providers/auth/auth';
-import {ServicePage} from "../service/service";
+// import {ServicePage} from "../service/service";
 import {HttpErrorResponse} from "@angular/common/http";
 import {ApiProvider} from "../../providers/api/api";
 import {PhotoViewer} from '@ionic-native/photo-viewer';
 import {Service} from '../../models/service';
 import {FiltroModalPage} from '../filtro-modal/filtro-modal';
 
-// @IonicPage()
+@IonicPage()
 @Component({
   selector: "page-services",
   templateUrl: "services.html"
@@ -164,7 +164,7 @@ export class ServicesPage {
   }
 
   openServicePage(id, index) {
-    this.navCtrl.push(ServicePage, {
+    this.navCtrl.push("ServicePage", {
       service: this.services[index], //paso el service
       serviceId: id,  //si paso el id del servicio para la peticion
       parentPage: this

@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import {
+import {IonicPage,
   NavController,
   Platform,
   NavParams,
@@ -16,10 +16,10 @@ import { HttpErrorResponse } from "@angular/common/http";
 import { sendService } from "../../models/sendService";
 import { PhotoViewer } from "@ionic-native/photo-viewer";
 import { ServicesPage } from "../services/services";
-import { MyservicesPage } from "../myservices/myservices";
+// import { MyservicesPage } from "../myservices/myservices";
 import { SubCategoryProvider } from "../../providers/sub-category/sub-category";
 
-// @IonicPage()
+@IonicPage()
 @Component({
   selector: "page-create1",
   templateUrl: "create1.html"
@@ -91,7 +91,7 @@ export class Create1Page {
 
   backToHome() {
     if (this.edit) {
-      this.navCtrl.popTo(MyservicesPage);
+      this.navCtrl.popTo("MyservicesPage");
     } else {
       this.navCtrl.popTo(ServicesPage);
     }

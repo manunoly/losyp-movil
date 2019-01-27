@@ -1,9 +1,7 @@
 {
-    "name": "virgen",
-    "app_id": "",
-    "type": "ionic-angular",
-    "integrations": {
-        "cordova": {}
-    }
-
+  "name": "virgen",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
 }

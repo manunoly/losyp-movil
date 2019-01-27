@@ -2,7 +2,7 @@ import {Component, OnInit, Input, Output, EventEmitter,AfterContentInit} from '@
 import {PopoverPage} from '../../pages/pop-over/pop-over'
 import {PopoverController, ViewController, NavController} from 'ionic-angular';
 import {AuthProvider} from '../../providers/auth/auth';
-import { Create1Page } from '../../pages/create1/create1';
+// import { Create1Page } from '../../pages/create1/create1';
 
 /**
  * Generated class for the AppHeaderComponent component.
@@ -47,7 +47,7 @@ export class AppHeaderComponent implements OnInit ,AfterContentInit{
   }
 
   openCreatePage(){
-    this.navCtrl.push(Create1Page);
+    this.navCtrl.push("Create1Page");
   }
 
   presentPopover(ev) {

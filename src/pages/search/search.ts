@@ -8,7 +8,7 @@ import {
 } from 'ionic-angular';
 import { HttpErrorResponse } from "@angular/common/http";
 import { ServiceProvider } from "../../providers/service/service.service";
-import { ServicePage } from "../service/service";
+// import { ServicePage } from "../service/service";
 import {FiltroModalPage} from '../filtro-modal/filtro-modal';
 
 /**
@@ -18,7 +18,7 @@ import {FiltroModalPage} from '../filtro-modal/filtro-modal';
  * Ionic pages and navigation.
  */
 
-// @IonicPage()
+@IonicPage()
 @Component({
   selector: "page-search",
   templateUrl: "search.html"
@@ -55,7 +55,7 @@ export class SearchPage {
   }
 
   openServicePage(id, index) {
-    this.navCtrl.push(ServicePage, {
+    this.navCtrl.push("ServicePage", {
       service: this.services[index], //paso el service
       serviceId: id //si paso el id del servicio para la peticion
     });

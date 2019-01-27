@@ -13,12 +13,11 @@ import {
   Geoposition,
   PositionError
 } from "@ionic-native/geolocation";
-import { FavoritesPage } from "../favorites/favorites";
 import { HttpErrorResponse } from "@angular/common/http";
 import { AuthProvider } from "../../providers/auth/auth";
 import { ServiceProvider } from "../../providers/service/service.service";
-import { ServicePage } from "../service/service";
-import { MyservicesPage } from "./../myservices/myservices";
+// import { ServicePage } from "../service/service";
+// import { MyservicesPage } from "./../myservices/myservices";
 import { TabPage } from '../tab/tab';
 
 declare var google;
@@ -219,7 +218,7 @@ export class TabMapaPage {
   addInfoWindow(marker, content) {
     google.maps.event.addListener(marker, "dblclick", () => {
        this.ngZone.run(() => {
-        this.navCtrl.push(ServicePage, {
+        this.navCtrl.push("ServicePage", {
           serviceId: JSON.parse(marker['datosServicio'])['id'],
           service: JSON.parse(marker['datosServicio'])
         });

@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 import { IonicPage, NavController, NavParams } from "ionic-angular";
 import { ApiProvider } from "../../providers/api/api";
 import { HttpErrorResponse } from "@angular/common/http";
-import { ServicePage } from "../service/service";
+// import { ServicePage } from "../service/service";
 
 /**
  * Generated class for the BuzonPage page.
@@ -68,7 +68,7 @@ export class BuzonPage {
       if (estado == "0") {
         this.servicioLeido(idMsg);
       }
-      this.navCtrl.push(ServicePage, {
+      this.navCtrl.push("ServicePage", {
         service: service, //paso el service
         serviceId: id, //si paso el id del servicio para la peticion
         parentPage: this

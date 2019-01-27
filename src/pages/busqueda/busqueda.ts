@@ -9,9 +9,9 @@ import {
 import { ServiceProvider } from "../../providers/service/service.service";
 import { HttpErrorResponse } from "@angular/common/http";
 import { PhotoViewer } from "@ionic-native/photo-viewer";
-import { ServicePage } from "../service/service";
+// import { ServicePage } from "../service/service";
 
-// @IonicPage()
+@IonicPage()
 @Component({
   selector: "page-busqueda",
   templateUrl: "busqueda.html"
@@ -33,7 +33,7 @@ export class BusquedaPage {
   ) {}
 
   openServicePage(id, index) {
-    this.navCtrl.push(ServicePage, {
+    this.navCtrl.push("ServicePage", {
       service: this.services[index], //paso el service
       serviceId: id //si paso el id del servicio para la peticion
     });

@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { IonicPage, NavController, NavParams } from "ionic-angular";
-import { ServicePage } from "../service/service";
+// import { ServicePage } from "../service/service";
 import {ServiceProvider} from '../../providers/service/service.service';
 
 /**

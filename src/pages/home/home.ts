@@ -11,7 +11,7 @@ import {ApiProvider} from "../../providers/api/api";
 // Paginas
 import {PopoverPage} from '../pop-over/pop-over';
 import {ServicesPage} from '../services/services';
-import {CategoriesPage} from '../categories/categories';
+// import {CategoriesPage} from '../categories/categories';
 import 'rxjs/add/operator/map';
 // componetes ionic
 import {IonicPage, PopoverController, NavController, AlertController, ModalController, LoadingController,} from 'ionic-angular';
@@ -23,7 +23,7 @@ import {
 } from "ionic-angular";
 // native components
 import {SplashScreen} from '@ionic-native/splash-screen';
-import {ServicePage} from "../service/service";
+// import {ServicePage} from "../service/service";
 import {HttpErrorResponse} from "@angular/common/http";
 import {PhotoViewer} from '@ionic-native/photo-viewer';
 import {StatusBar} from "@ionic-native/status-bar";
@@ -230,7 +230,7 @@ export class HomePage {
   }
 
     openServicePage(id, index) {
-      this.navCtrl.push(ServicePage, {
+      this.navCtrl.push("ServicePage", {
         service: this.services[index], //paso el service
         serviceId: id,  //si paso el id del servicio para la peticion
         parentPage: this
@@ -250,11 +250,11 @@ export class HomePage {
     }
 
     openCategoriesPage() {
-      this.navCtrl.push(CategoriesPage)
+      this.navCtrl.push("CategoriesPage")
     }
 
     openServicesPage(id, title) {
-      this.navCtrl.push(SearchPage, {
+      this.navCtrl.push("SearchPage", {
         buscar: "",
           filter_city: [],
           filter_category: [id],

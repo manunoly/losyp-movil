@@ -1,4 +1,5 @@
-/*import { NgModule } from '@angular/core';
+import { ComponentsModule } from './../../components/components.module';
+import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { FavoritesPage } from './favorites';
 
@@ -7,9 +8,9 @@ import { FavoritesPage } from './favorites';
     FavoritesPage
    ],
   imports: [
+    ComponentsModule,
     IonicPageModule.forChild(FavoritesPage),
       ]
 })
 export class FavoritesPageModule {}
 
-*/

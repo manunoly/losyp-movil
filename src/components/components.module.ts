@@ -1,12 +1,15 @@
-/*import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { AppHeaderComponent } from './app-header/app-header';
 import { IonRating } from './ion-rating/ion-rating';
 import { ServUpInfoComponent } from './serv-up-info/serv-up-info';
+
+import { IonicModule } from 'ionic-angular';
+
 @NgModule({
 	declarations: [AppHeaderComponent,IonRating,
     ServUpInfoComponent],
-	imports: [],
+	imports: [IonicModule],
 	exports: [AppHeaderComponent,IonRating,
-    ServUpInfoComponent]
+    ServUpInfoComponent],
 })
-export class ComponentsModule {}*/
+export class ComponentsModule {}

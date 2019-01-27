@@ -10,10 +10,11 @@ import {
 
 import { ServiceProvider } from "../../providers/service/service.service";
 import { HttpErrorResponse } from "@angular/common/http";
-import { ServicePage } from "../service/service";
+// import { ServicePage } from "../service/service";
 import { PhotoViewer } from "@ionic-native/photo-viewer";
+import { AppHeaderComponent } from './../../components/app-header/app-header';
 
-// @IonicPage()
+@IonicPage()
 @Component({
   selector: "page-favorites",
   templateUrl: "favorites.html"
@@ -62,7 +63,7 @@ export class FavoritesPage {
   }
 
   openServicePage(id, index) {
-    this.navCtrl.push(ServicePage, {
+    this.navCtrl.push("ServicePage", {
       service: this.services[index], //paso el service
       serviceId: id, //si paso el id del servicio para la peticion
       parentPage: this

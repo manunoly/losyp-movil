@@ -1,12 +1,12 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, LoadingController, ViewController, App, AlertController, ToastController} from "ionic-angular";
 import {ServiceProvider} from '../../providers/service/service.service';
-import {ServicePage} from '../service/service';
+// import {ServicePage} from '../service/service';
 import {PhotoViewer} from '@ionic-native/photo-viewer';
-import {Create1Page} from '../create1/create1';
+// import {Create1Page} from '../create1/create1';
 import {PagarPage} from '../pagar/pagar';
 
-// @IonicPage()
+@IonicPage()
 @Component({
   selector: 'page-myservices',
   templateUrl: 'myservices.html',
@@ -113,7 +113,7 @@ export class MyservicesPage {
     //   service:serv
     // });
     // this.viewCtrl.dismiss();
-    this.navCtrl.push(ServicePage, {
+    this.navCtrl.push("ServicePage", {
       serviceId: id,
       service: serv
     });
@@ -150,7 +150,7 @@ export class MyservicesPage {
   }
 
   editService(serv) {
-    this.navCtrl.push(Create1Page, {
+    this.navCtrl.push("Create1Page", {
       service: serv
     });
   }

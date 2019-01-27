@@ -9,7 +9,7 @@ import { sendService } from "../../models/sendService";
 import { ServiceProvider } from "../../providers/service/service.service";
 import { HttpErrorResponse } from "@angular/common/http";
 import { Position } from "../../models/position";
-import { ServicePage } from "../service/service";
+// import { ServicePage } from "../service/service";
 import { AuthProvider } from "../../providers/auth/auth";
 import { Geolocation } from "@ionic-native/geolocation";
 
@@ -106,7 +106,7 @@ export class Create4Page {
     this.servProv.createFullService(this.service).then(
       data => {
         setTimeout(() => {
-          this.navCtrl.push(ServicePage, {
+          this.navCtrl.push("ServicePage", {
             service: data, //paso el service
             serviceId: data.id //si paso el id del servicio para la peticion
           });

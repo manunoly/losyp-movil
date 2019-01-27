@@ -10,17 +10,17 @@ import {
   ToastController
 } from "ionic-angular";
 import { ServiceProvider } from "../../providers/service/service.service";
-import { InfoPage } from "../info/info";
-import { MapaPage } from "../mapa/mapa";
+// import { InfoPage } from "../info/info";
+// import { MapaPage } from "../mapa/mapa";
 import { AuthProvider } from "../../providers/auth/auth";
 import { GaleriaPage } from "../galeria/galeria";
-import { ComentariosPage } from "../comentarios/comentarios";
+// import { ComentariosPage } from "../comentarios/comentarios";
 import { Service } from "../../models/service";
 import { PopoverPage } from "../pop-over/pop-over";
 import { SocialSharing } from "@ionic-native/social-sharing";
 import {ApiProvider} from '../../providers/api/api';
 
-// @IonicPage()
+@IonicPage()
 @Component({
   selector: "page-service",
   templateUrl: "service.html"
@@ -99,14 +99,14 @@ export class ServicePage {
   }
 
   openInfo() {
-    this.navCtrl.push(InfoPage, {
+    this.navCtrl.push("InfoPage", {
       service: this.passedService,
       cant_c: this.cant_c
     });
   }
 
   openMapa() {
-    this.navCtrl.push(MapaPage, {
+    this.navCtrl.push("MapaPage", {
       response: this.response,
       cant_c: this.cant_c,
       service: this.passedService
@@ -114,14 +114,14 @@ export class ServicePage {
   }
 
   openGaleria() {
-    this.navCtrl.push(GaleriaPage, {
+    this.navCtrl.push("GaleriaPage", {
       service: this.passedService,
       cant_c: this.cant_c
     });
   }
 
   openComentarios() {
-    this.navCtrl.push(ComentariosPage, {
+    this.navCtrl.push("ComentariosPage", {
       service: this.passedService,
       cant_c: this.cant_c
     });

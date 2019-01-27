@@ -1,4 +1,5 @@
-/* import { NgModule } from '@angular/core';
+import { ComponentsModule } from './../../components/components.module';
+import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { SubcategoriesPage } from './subcategories';
 @NgModule({
@@ -6,8 +7,9 @@ import { SubcategoriesPage } from './subcategories';
     SubcategoriesPage
   ],
   imports: [
+    ComponentsModule,
     IonicPageModule.forChild(SubcategoriesPage)
   ]
 })
 export class SubcategoriesPageModule {}
- */
+ 

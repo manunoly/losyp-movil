@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from "@angular/core";
-import { NavParams, ToastController } from "ionic-angular";
+import { IonicPage, NavParams, ToastController } from "ionic-angular";
 
 import { Geolocation, Geoposition } from "@ionic-native/geolocation";
 import { Position } from "../../models/position";
@@ -12,7 +12,7 @@ import {
 
 declare var google;
 
-// @IonicPage()
+@IonicPage()
 @Component({
   selector: "page-mapa",
   templateUrl: "mapa.html"

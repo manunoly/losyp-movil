@@ -12,21 +12,21 @@ import { MyApp } from './app.component';
 //paginas
 import { HomePage } from '../pages/home/home';
 import { PopoverPage } from '../pages/pop-over/pop-over';
-import { CategoriesPage } from '../pages/categories/categories';
-import { SubcategoriesPage } from '../pages/subcategories/subcategories';
-import { ServicesPage } from '../pages/services/services';
+// import { CategoriesPage } from '../pages/categories/categories';
+// import { SubcategoriesPage } from '../pages/subcategories/subcategories';
+// import { ServicesPage } from '../pages/services/services';
 // import { LoginPage  } from '../pages/login/login';
 // import { SignupPage  } from '../pages/signup/signup';
-import { FavoritesPage  } from '../pages/favorites/favorites';
-import { BusquedaPage  } from '../pages/busqueda/busqueda';
-import { MyservicesPage  } from '../pages/myservices/myservices';
-import { ServicePage  } from '../pages/service/service';
+// import { FavoritesPage  } from '../pages/favorites/favorites';
+// import { BusquedaPage  } from '../pages/busqueda/busqueda';
+// import { MyservicesPage  } from '../pages/myservices/myservices';
+// import { ServicePage  } from '../pages/service/service';
 import { RatePage } from "../pages/rate/rate";
-import { InfoPage } from "../pages/info/info";
-import { MapaPage } from "../pages/mapa/mapa";
-import { GaleriaPage } from "../pages/galeria/galeria";
-import { ComentariosPage } from "../pages/comentarios/comentarios";
-import { Create1Page } from "../pages/create1/create1";
+// import { InfoPage } from "../pages/info/info";
+// import { MapaPage } from "../pages/mapa/mapa";
+// import { GaleriaPage } from "../pages/galeria/galeria";
+// import { ComentariosPage } from "../pages/comentarios/comentarios";
+// import { Create1Page } from "../pages/create1/create1";
 import { Create2Page } from "../pages/create2/create2";
 import {  TabPage} from "../pages/tab/tab";
 import {  TabMapaPage} from "../pages/tab-mapa/tab-mapa";
@@ -35,9 +35,10 @@ import {CondicionesPage} from "../pages/condiciones/condiciones";
 
 
 // Componentes
-import {AppHeaderComponent} from '../components/app-header/app-header';
-import { IonRating } from '../components/ion-rating/ion-rating';
-import { ServUpInfoComponent } from '../components/serv-up-info/serv-up-info';
+// import {AppHeaderComponent} from '../components/app-header/app-header';
+// import { IonRating } from '../components/ion-rating/ion-rating';
+// import { ServUpInfoComponent } from '../components/serv-up-info/serv-up-info';
+import { ComponentsModule } from './../components/components.module';
 
 //Servicios
 import { SubCategoryProvider } from '../providers/sub-category/sub-category';
@@ -63,7 +64,7 @@ import { ModalDenunciaPage } from '../pages/modal-denuncia/modal-denuncia';
 // import { ChangePassPage } from '../pages/change-pass/change-pass';
 import {ModalHorarioPage} from "../pages/modal-horario/modal-horario";
 import { SocialSharing } from '@ionic-native/social-sharing';
-import {SearchPage} from "../pages/search/search";
+// import {SearchPage} from "../pages/search/search";
 import { OpenNativeSettings } from '@ionic-native/open-native-settings';
 import { Diagnostic } from '@ionic-native/diagnostic';
 import { NotificacionesPushProvider } from '../providers/notificaciones-push/notificaciones-push';
@@ -74,27 +75,27 @@ import { Facebook } from '@ionic-native/facebook';
     MyApp,
     TabPage,
     HomePage,
-    SearchPage,
+    // SearchPage,
     PopoverPage,
     CondicionesPage,
-    CategoriesPage,
-    SubcategoriesPage,
-    AppHeaderComponent,
-    IonRating,
-    ServUpInfoComponent,
-    ServicesPage,
+    // CategoriesPage,
+    // SubcategoriesPage,
+    // AppHeaderComponent,
+    // IonRating,
+    // ServUpInfoComponent,
+    // ServicesPage,
     FiltroModalPage,
     ModalHorarioPage,
-    FavoritesPage,
-    BusquedaPage,
-    MyservicesPage,
-    ServicePage,
+    // FavoritesPage,
+    // BusquedaPage,
+    // MyservicesPage,
+    // ServicePage,
     RatePage,
-    InfoPage,
-    MapaPage,
-    GaleriaPage,
-    ComentariosPage,
-    Create1Page,
+    // InfoPage,
+    // MapaPage,
+    // GaleriaPage,
+    // ComentariosPage,
+    // Create1Page,
     Create2Page,
     Create3Page,
     Create4Page,
@@ -112,13 +113,15 @@ import { Facebook } from '@ionic-native/facebook';
     BrowserModule,
     HttpModule,
     HttpClientModule,
+    ComponentsModule,
     IonicModule.forRoot(MyApp,{
       scrollPadding: false,
       scrollAssist: true, //estaba true
       // autoFocusAssist: false
       // Tabs config
       tabsHideOnSubPages: true,
-    })
+    }),
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -126,28 +129,28 @@ import { Facebook } from '@ionic-native/facebook';
     TabPage,
     HomePage,
     PopoverPage,
-    SearchPage,
+    // SearchPage,
     CondicionesPage,
-    CategoriesPage,
-    SubcategoriesPage,
-    AppHeaderComponent,
-    IonRating,
-    ServUpInfoComponent,
-    ServicesPage,
+    // CategoriesPage,
+    // SubcategoriesPage,
+    // AppHeaderComponent,
+    // IonRating,
+    // ServUpInfoComponent,
+    // ServicesPage,
     FiltroModalPage,
     // LoginPage,
     // SignupPage,
-    FavoritesPage,
+    // FavoritesPage,
     ModalHorarioPage,
-    BusquedaPage,
-    MyservicesPage,
-     ServicePage,
+    // BusquedaPage,
+    // MyservicesPage,
+    //  ServicePage,
     RatePage,
-    InfoPage,
-    MapaPage,
-    GaleriaPage,
-    ComentariosPage,
-    Create1Page,
+    // InfoPage,
+    // MapaPage,
+    // GaleriaPage,
+    // ComentariosPage,
+    // Create1Page,
     Create2Page,
     Create3Page,
     Create4Page,
