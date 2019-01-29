@@ -10,20 +10,19 @@ import { PhotoViewer } from '@ionic-native/photo-viewer';
   templateUrl: 'galeria.html',
 })
 export class GaleriaPage {
-  service: any = {};
+  service;
   galeria : any[] = [];
   comentario : string;;
   cant_c:number;
   havePhoto:boolean;
   constructor(private platform: Platform,public navParams: NavParams,private photoViewer: PhotoViewer,) {
-  }
-
-  ionViewDidLoad() {
     this.service = this.navParams.get("service");
     this.cant_c = this.navParams.get("cant_c");
     this.galeria= this.service['imagesList'];
     this.havePhoto = this.galeria.length> 0?true:false;
+  }
 
+  ionViewDidLoad() {
 
   }
   viewImg(img) {

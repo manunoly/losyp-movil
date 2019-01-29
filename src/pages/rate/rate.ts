@@ -8,9 +8,9 @@ import {
 
 
 
-// @IonicPage()
+@IonicPage()
 @Component({
-  selector: 'page-rate',
+  selector: 'rate-page',
   templateUrl: 'rate.html',
 })
 export class RatePage {

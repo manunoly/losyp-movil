@@ -36,7 +36,7 @@ export class MapaPage {
   destino: any;
   @ViewChild("map") mapElement: ElementRef;
   map: any;
-  private service: any = {};
+  service;
   loggedIn: boolean;
 
   constructor(
@@ -46,24 +46,19 @@ export class MapaPage {
     public events: Events,
     private launchNavigator: LaunchNavigator,
     public toastCtrl: ToastController
-  ) {}
-
-  ionViewDidEnter() {
+  ) {
     this.service = this.navParams.get("service");
     this.cant_c = this.navParams.get("cant_c");
     this.positions = this.service.positions;
+  }
 
-      this.service = this.navParams.get("service");
-      this.cant_c = this.navParams.get("cant_c");
-      this.positions = this.service.positions;
 
+  ionViewDidLoad() {
       //cargar mapa con posiciones
       if (typeof google !== "undefined") {
           this.loadMap();
       }
-  }
 
-  ionViewDidLoad() {
       if (this.auth.getLatitud() != null) {
           this.latitude = this.auth.getLatitud();
           this.longitude = this.auth.getLongitud();

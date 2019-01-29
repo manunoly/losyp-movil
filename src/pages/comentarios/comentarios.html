@@ -5,7 +5,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content *ngIf="service" padding>
   <serv-up-info [passedService]="service" [cantComentarios]="cant_c" (rateService)="rateService($event)"></serv-up-info>
   <!--<div *ngIf="currentUser">-->
   <!--<ion-label text-center color="azul-claro">-->

@@ -10,7 +10,7 @@ import {
   ToastController
 } from "ionic-angular";
 import { ServiceProvider } from "../../providers/service/service.service";
-// import { InfoPage } from "../info/info";
+import { InfoPage } from "../info/info";
 // import { MapaPage } from "../mapa/mapa";
 import { AuthProvider } from "../../providers/auth/auth";
 import { GaleriaPage } from "../galeria/galeria";
@@ -100,7 +100,7 @@ export class ServicePage {
 
   openInfo() {
     this.navCtrl.push("InfoPage", {
-      service: this.passedService,
+      service: this.passedService, 
       cant_c: this.cant_c
     });
   }

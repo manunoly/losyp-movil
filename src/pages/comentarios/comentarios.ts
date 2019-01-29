@@ -25,15 +25,17 @@ export class ComentariosPage {
     public navParams: NavParams,
     public auth: AuthProvider,public api:ApiProvider,
     public popCtrl: PopoverController ) {
-  }
+      this.service = this.navParams.get("service");
+      this.cant_c = this.navParams.get("cant_c");
+      this.comentarios= this.service['servicecommentsList'];
+      this.currentUser = this.auth.getUser();
+      this.loggedIn = this.auth.isLoggedIn();
+    }
 
   ionViewDidLoad() {
-    this.service = this.navParams.get("service");
-    this.cant_c = this.navParams.get("cant_c");
-    this.comentarios= this.service['servicecommentsList'];
-    this.currentUser = this.auth.getUser();
-    this.loggedIn = this.auth.isLoggedIn();
+
   }
+
  comentar(){
    this.api.addComment(this.service.id,this.comentario).then(
     data => {
