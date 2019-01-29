@@ -1,3 +1,4 @@
+// import { HomePage } from './../pages/home/home';
 import {Component} from '@angular/core';
 import {Platform} from 'ionic-angular';
 import {StatusBar} from '@ionic-native/status-bar';
@@ -13,8 +14,8 @@ declare var google;
   templateUrl: "app.html"
 })
 export class MyApp {
-  // rootPage: any = HomePage;
-  rootPage: any = TabPage;
+  rootPage: any = "HomePage";
+  // rootPage: any = TabPage;
   latLng: any;
   watch: any;
 

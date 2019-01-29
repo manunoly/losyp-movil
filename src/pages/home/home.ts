@@ -13,7 +13,7 @@ import {PopoverPage} from '../pop-over/pop-over';
 import {ServicesPage} from '../services/services';
 // import {CategoriesPage} from '../categories/categories';
 import 'rxjs/add/operator/map';
-// componetes ionic
+// componetes ionic 
 import {IonicPage, PopoverController, NavController, AlertController, ModalController, LoadingController,} from 'ionic-angular';
 import {
   NavParams,
@@ -33,9 +33,9 @@ import {Diagnostic} from '@ionic-native/diagnostic';
 import {Geoposition} from "@ionic-native/geolocation";
 import {FiltroModalPage} from '../filtro-modal/filtro-modal';
 
-/* @IonicPage({
+@IonicPage({
   priority: 'high'
-}) */
+})
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -130,6 +130,10 @@ export class HomePage {
       });
     }
 
+    goToMap(){
+      this.navCtrl.push("TabMapaPage");
+    }
+
     filterServices(){
         const profileModal = this.modalCtrl.create(FiltroModalPage, {
             filter_city: this.filter_city,
@@ -207,7 +211,7 @@ export class HomePage {
   }
 
     buscar() {
-        this.navCtrl.push(SearchPage, {
+        this.navCtrl.push("SearchPage", {
           buscar: this.search.value,
             filter_city: this.filter_city,
             filter_category: this.filter_category
@@ -223,7 +227,7 @@ export class HomePage {
 
     goSearch(keyCode) {
     if (keyCode === 13) {
-      this.navCtrl.push(SearchPage, {
+      this.navCtrl.push("SearchPage", {
         buscar: this.search.value
       });
     }

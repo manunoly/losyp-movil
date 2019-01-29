@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams ,ToastController, LoadingController
 import {User} from '../../models/user';
 import {AuthProvider} from '../../providers/auth/auth';
  import { HomePage } from "../home/home";
-import {CondicionesPage} from "../condiciones/condiciones";
+// import {CondicionesPage} from "../condiciones/condiciones";
 import { NotificacionesPushProvider } from './../../providers/notificaciones-push/notificaciones-push';
 import { FCM } from "@ionic-native/fcm";
 import { Facebook } from '@ionic-native/facebook';
@@ -40,7 +40,7 @@ export class SignupPage {
   }
 
   openCondiciones(){
-    this.navCtrl.push(CondicionesPage);
+    this.navCtrl.push("CondicionesPage");
   }
 
   facebookRegister(){

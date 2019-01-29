@@ -2,7 +2,7 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {CallNumber} from '@ionic-native/call-number';
 import {AuthProvider} from '../../providers/auth/auth';
 import {ApiProvider} from '../../providers/api/api';
-import {RatePage} from '../../pages/rate/rate';
+// import {RatePage} from '../../pages/rate/rate';
 import {ModalController, Platform} from 'ionic-angular';
 import {ServiceProvider} from '../../providers/service/service.service';
 import {PhotoViewer} from '@ionic-native/photo-viewer';
@@ -48,7 +48,7 @@ export class ServUpInfoComponent {
   }
 
   openRate(id, rated) {
-    const profileModal = this.modalCtrl.create(RatePage, {rated: rated});
+    const profileModal = this.modalCtrl.create("RatePage", {rated: rated});
     profileModal.onDidDismiss(data => {
       if (data.rate !== "cancel")
         this.servPro.rateservice(id, data.rate, data.comment).then(

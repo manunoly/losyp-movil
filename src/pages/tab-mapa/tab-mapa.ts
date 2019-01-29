@@ -22,7 +22,7 @@ import { TabPage } from '../tab/tab';
 
 declare var google;
 
-// @IonicPage()
+@IonicPage()
 @Component({
   selector: "page-tab-mapa",
   templateUrl: "tab-mapa.html"
@@ -122,7 +122,7 @@ export class TabMapaPage {
   }
 
   openLoginPage() {
-    this.navCtrl.parent.goToRoot();
+    // this.navCtrl.parent.goToRoot();
     this.navCtrl.push("LoginPage");
   }
 

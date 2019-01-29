@@ -23,6 +23,12 @@
     </ion-grid>
 
     <ng-container *ngIf="busqueda; else topCategories">
+      <div offset-6>
+          <button icon-start outline ion-button block round (click)="goToMap()">
+          <ion-icon name="pin"></ion-icon>
+            Mapa
+          </button>
+        </div>
       <p *ngIf="noFound">No hay resultados </p>
       <ion-list>
         <ion-item *ngFor="let serv of services; let i = index">
@@ -68,7 +74,12 @@
     </button>
   </ng-template>
   <ng-template #topCategories>
-
+    <div offset-6>
+      <button icon-start outline ion-button block round (click)="goToMap()">
+      <ion-icon name="pin"></ion-icon>
+        Mapa
+      </button>
+    </div>
     <ion-label text-center color="azul-claro">Principales tendencias</ion-label>
     <ion-list>
       <button *ngFor="let sub of subCategories" class="specific-button" text-left color="azul-claro" ion-button block margin-bottom="1"

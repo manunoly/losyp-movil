@@ -10,7 +10,7 @@ import {EqualValidator} from '../_directive/validate-password.directive';
 
 import { MyApp } from './app.component';
 //paginas
-import { HomePage } from '../pages/home/home';
+// import { HomePage } from '../pages/home/home';
 import { PopoverPage } from '../pages/pop-over/pop-over';
 // import { CategoriesPage } from '../pages/categories/categories';
 // import { SubcategoriesPage } from '../pages/subcategories/subcategories';
@@ -21,7 +21,7 @@ import { PopoverPage } from '../pages/pop-over/pop-over';
 // import { BusquedaPage  } from '../pages/busqueda/busqueda';
 // import { MyservicesPage  } from '../pages/myservices/myservices';
 // import { ServicePage  } from '../pages/service/service';
-import { RatePage } from "../pages/rate/rate";
+// import { RatePage } from "../pages/rate/rate";
 // import { InfoPage } from "../pages/info/info";
 // import { MapaPage } from "../pages/mapa/mapa";
 // import { GaleriaPage } from "../pages/galeria/galeria";
@@ -29,8 +29,8 @@ import { RatePage } from "../pages/rate/rate";
 // import { Create1Page } from "../pages/create1/create1";
 import { Create2Page } from "../pages/create2/create2";
 import {  TabPage} from "../pages/tab/tab";
-import {  TabMapaPage} from "../pages/tab-mapa/tab-mapa";
-import {CondicionesPage} from "../pages/condiciones/condiciones";
+// import {  TabMapaPage} from "../pages/tab-mapa/tab-mapa";
+// import {CondicionesPage} from "../pages/condiciones/condiciones";
 // import { BuzonPage } from './../pages/buzon/buzon';
 
 
@@ -74,10 +74,10 @@ import { Facebook } from '@ionic-native/facebook';
   declarations: [
     MyApp,
     TabPage,
-    HomePage,
+    // HomePage,
     // SearchPage,
     PopoverPage,
-    CondicionesPage,
+    // CondicionesPage,
     // CategoriesPage,
     // SubcategoriesPage,
     // AppHeaderComponent,
@@ -90,7 +90,7 @@ import { Facebook } from '@ionic-native/facebook';
     // BusquedaPage,
     // MyservicesPage,
     // ServicePage,
-    RatePage,
+    // RatePage,
     // InfoPage,
     // MapaPage,
     // GaleriaPage,
@@ -100,7 +100,7 @@ import { Facebook } from '@ionic-native/facebook';
     Create3Page,
     Create4Page,
     PagarPage,
-    TabMapaPage,
+    // TabMapaPage,
     ModalDenunciaPage,
       EqualValidator,
     // ChangePassPage,
@@ -127,10 +127,10 @@ import { Facebook } from '@ionic-native/facebook';
   entryComponents: [
     MyApp,
     TabPage,
-    HomePage,
+    // HomePage,
     PopoverPage,
     // SearchPage,
-    CondicionesPage,
+    // CondicionesPage,
     // CategoriesPage,
     // SubcategoriesPage,
     // AppHeaderComponent,
@@ -145,7 +145,7 @@ import { Facebook } from '@ionic-native/facebook';
     // BusquedaPage,
     // MyservicesPage,
     //  ServicePage,
-    RatePage,
+    // RatePage,
     // InfoPage,
     // MapaPage,
     // GaleriaPage,
@@ -155,7 +155,7 @@ import { Facebook } from '@ionic-native/facebook';
     Create3Page,
     Create4Page,
     PagarPage,
-    TabMapaPage,
+    // TabMapaPage,
     ModalDenunciaPage,
     // ChangePassPage,
     // BuzonPage
