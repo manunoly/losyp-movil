@@ -107,7 +107,7 @@
     </plugin>
     <plugin name="cordova-plugin-fcm" spec="^2.1.2" />
     <plugin name="call-number" spec="^1.0.1" />
-    <plugin name="cordova-plugin-facebook4" spec="^3.0.0">
+    <plugin name="cordova-plugin-facebook4" spec="^3.2.0">
         <variable name="APP_ID" value="214537035714815" />
         <variable name="APP_NAME" value="com.losyp.ecuador" />
         <variable name="FACEBOOK_ANDROID_SDK_VERSION" value="4.36.0" />
