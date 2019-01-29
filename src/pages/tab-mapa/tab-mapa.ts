@@ -18,7 +18,7 @@ import { AuthProvider } from "../../providers/auth/auth";
 import { ServiceProvider } from "../../providers/service/service.service";
 // import { ServicePage } from "../service/service";
 // import { MyservicesPage } from "./../myservices/myservices";
-import { TabPage } from '../tab/tab';
+// import { TabPage } from '../tab/tab';
 
 declare var google;
 

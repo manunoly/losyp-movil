@@ -2,7 +2,7 @@ import { Component,ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams ,ToastController, LoadingController} from 'ionic-angular';
 import {User} from '../../models/user';
 import {AuthProvider} from '../../providers/auth/auth';
- import { HomePage } from "../home/home";
+//  import { HomePage } from "../home/home";
 // import {CondicionesPage} from "../condiciones/condiciones";
 import { NotificacionesPushProvider } from './../../providers/notificaciones-push/notificaciones-push';
 import { FCM } from "@ionic-native/fcm";
@@ -92,7 +92,7 @@ export class SignupPage {
           loading.dismiss();
           this.push.checkTokenMovil();
           this.push.subcribe();
-          this.navCtrl.setRoot(HomePage);
+          this.navCtrl.popToRoot();
         } else {
           let toast = this.toastCtrl.create({
             message: "Problema de conexión",
@@ -115,7 +115,7 @@ export class SignupPage {
         toast.present();
         loading.dismiss();
         // this.navCtrl.goToRoot({});
-        this.navCtrl.push(HomePage, {
+        this.navCtrl.setRoot("HomePage", {
           connetionDown: true
         });
         // this.navCtrl.pop();
@@ -142,7 +142,7 @@ export class SignupPage {
               toast.present();
               if(this.user.phoneid == "") this.push.forceUpdateMovilId()
               else this.push.subcribe();
-              this.navCtrl.setRoot(HomePage);
+              this.navCtrl.setRoot("HomePage");
               //this.navCtrl.pop();
               } else {
                 let toast = this.toastCtrl.create({

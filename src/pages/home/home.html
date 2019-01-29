@@ -6,13 +6,24 @@
   <ng-container *ngIf="!connetionDown; else elseTemplate">
     <ion-grid no-padding>
       <ion-row>
-        <ion-col col-10>
+        <ion-col col-8>
           <ion-searchbar id="search" (keypress)="goSearch($event.keyCode)" placeholder="¿Qué estas buscando?" #search></ion-searchbar>
         </ion-col>
-        <ion-col col-2>
-          <button block color="azul-claro" class="buscar-btn" ion-button icon-only (click)="buscar()">
-            <ion-icon name="search"></ion-icon>
-          </button>
+        <ion-col col-4> 
+          <ion-row>
+            <ion-col col-6>
+                <button full color="azul-claro" class="buscar-btn" ion-button icon-only (click)="buscar()">
+                  <ion-icon name="search"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col col-6>
+                <button block class="buscar-btn" outline ion-button icon-only (click)="goToMap()">
+                  <ion-icon name="pin"></ion-icon>
+                </button>
+            </ion-col>
+          </ion-row>
+
+
         </ion-col>
 <!--         <ion-col col-2>
           <button block  color="azul-claro"  class="buscar-btn" ion-button icon-only (click)="filterServices()">
@@ -23,12 +34,6 @@
     </ion-grid>
 
     <ng-container *ngIf="busqueda; else topCategories">
-      <div offset-6>
-          <button icon-start outline ion-button block round (click)="goToMap()">
-          <ion-icon name="pin"></ion-icon>
-            Mapa
-          </button>
-        </div>
       <p *ngIf="noFound">No hay resultados </p>
       <ion-list>
         <ion-item *ngFor="let serv of services; let i = index">
@@ -74,12 +79,6 @@
     </button>
   </ng-template>
   <ng-template #topCategories>
-    <div offset-6>
-      <button icon-start outline ion-button block round (click)="goToMap()">
-      <ion-icon name="pin"></ion-icon>
-        Mapa
-      </button>
-    </div>
     <ion-label text-center color="azul-claro">Principales tendencias</ion-label>
     <ion-list>
       <button *ngFor="let sub of subCategories" class="specific-button" text-left color="azul-claro" ion-button block margin-bottom="1"

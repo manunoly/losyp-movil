@@ -10,8 +10,8 @@ import {
 } from "ionic-angular";
 import {User} from '../../models/user';
 import {AuthProvider} from '../../providers/auth/auth';
-import {HomePage} from '../home/home';
-import { TabPage } from '../tab/tab';
+// import {HomePage} from '../home/home';
+// import { TabPage } from '../tab/tab';
 import { NotificacionesPushProvider } from '../../providers/notificaciones-push/notificaciones-push';
 import { FCM } from "@ionic-native/fcm";
 // import { SignupPage } from '../signup/signup';
@@ -150,7 +150,7 @@ export class LoginPage {
           this.loading.dismiss();
           this.push.checkTokenMovil();
           this.push.subcribe();
-          this.navCtrl.push(TabPage);
+          this.navCtrl.setRoot("HomePage");
           //  this.navCtrl.pop();
         } else {
           let toast = this.toastCtrl.create({
@@ -174,7 +174,7 @@ export class LoginPage {
         toast.present();
         this.loading.dismiss();
         // this.navCtrl.goToRoot({});
-        this.navCtrl.push(TabPage, {
+        this.navCtrl.setRoot("HomePage", {
           connetionDown: true
         });
         // this.navCtrl.pop();
