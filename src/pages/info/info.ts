@@ -38,9 +38,6 @@ export class InfoPage {
   ) {
     this.service = this.navParams.get("service");
     this.cant_c = this.navParams.get("cant_c");
-  }
-
-  ionViewDidLoad() {
     for (let element of this.service.timesList) {
       let str_to_array = element.week_days.split(",");
       this.timesList.push({
@@ -50,6 +47,11 @@ export class InfoPage {
       });
     }
   }
+
+  ionViewDidLoad() {
+    console.log(this.service);
+  }
+
   Llamar(number) {
     this.callNumber
       .callNumber(number, true)

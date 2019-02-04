@@ -2,8 +2,8 @@ import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {LoadingController} from 'ionic-angular';
 import {SubCategoryProvider} from '../../providers/sub-category/sub-category';
-import {ServicesPage} from '../services/services';
-import { SearchPage } from './../search/search';
+// import {ServicesPage} from '../services/services';
+// import { SearchPage } from './../search/search';
 
 
 /**
@@ -66,7 +66,7 @@ export class SubcategoriesPage {
   }
 
   openSubcategoriesBusqueda(catId, title){
-    this.navCtrl.push(SearchPage, {
+    this.navCtrl.push("SearchPage", {
       buscar: "",
         filter_city: [],
         filter_category: [catId],
@@ -77,7 +77,7 @@ export class SubcategoriesPage {
 
   // abre la vista de los servicios asociados a la categoria en dada
   openServicesPage(id) {
-    this.navCtrl.push(ServicesPage, {
+    this.navCtrl.push("ServicesPage", {
       subCatId: id
     });
   }
